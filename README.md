@@ -418,7 +418,8 @@ ${Runtime.getRuntime().exec("touch /tmp/pwned")}
     - `"\x0B"` (0x0B)
     - `"\r"` (0x0D)
     - `"\0"` (0x00)
-- 可以發現預設不包含 `"\f"` (0x0C)
+	- `"\f"` (0x0C) (PHP >= 8.6)
+- 可以發現 PHP < 8.6 時預設不包含 `"\f"` (0x0C)
     - 比較：`is_numeric()` 允許 `\f` 在開頭
 - 如果參數是 unset 或空的變數，回傳值是空字串
 
